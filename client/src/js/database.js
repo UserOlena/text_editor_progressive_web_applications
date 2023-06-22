@@ -1,6 +1,6 @@
 import { openDB } from 'idb';
 
-const initdb = async () =>
+const initdb = async () => {
   openDB('jate', 1, {
     upgrade(db) {
       if (db.objectStoreNames.contains('jate')) {
@@ -11,7 +11,9 @@ const initdb = async () =>
       console.log('jate database created');
     },
   });
+}
 
+// writes new editor value to the indexDB
 export const putDb = async (content) => {
   console.log('PUT to the database');
   const jateDb = await openDB('jate', 1);
@@ -19,17 +21,27 @@ export const putDb = async (content) => {
   const store = tx.objectStore('jate');
   const result = await store.put({ content: content });
   console.log('🚀 - data saved to the database', result);
+  deleteDb(result);
 }
 
-// TODO: Add logic for a method that gets all the content from the database
+// retrieves the latest editor value
 export const getDb = async () => {
   console.log('GET from the DB');
   const jateDb = await openDB('jate', 1);
-  const tx = jateDb.transaction('jate', 'readonly');
+  const tx = jateDb.transaction('jate', 'readwrite');
   const store = tx.objectStore('jate');
   const result = await store.getAll();
-  console.log('result.value', result.content);
-  return result.content;
+  return result.length > 0 ? result[0].content : null;
+}
+
+// deletes previously saved editor value, 
+// since localStorage doesn't provide with the ID to know with instance to update
+const deleteDb = async (id) => {
+  console.log('Delete from teh DB', id);
+  const jateDb = await openDB('jate', 1);
+  const tx = jateDb.transaction('jate', 'readwrite');
+  const store = tx.objectStore('jate');
+  await store.delete(id - 1);
 }
 
 initdb();
