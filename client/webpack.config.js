@@ -17,11 +17,19 @@ module.exports = () => {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
+    optimization: {
+      minimize: false
+    },
+    devServer: {
+      // The `hot` option is to use the webpack-dev-server in combination with the hot module replacement API.
+      hot: 'only',
+    },
     plugins: [
       // Webpack plugin that generates our html file and injects our bundles. 
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'JATE'
+        title: 'JATE',
+        favicon: "./favicon.ico",
       }),
       // Injects our custom service worker
       new InjectManifest({
