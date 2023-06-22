@@ -37,7 +37,7 @@ export const getDb = async () => {
 // deletes previously saved editor value, 
 // since localStorage doesn't provide with the ID to know with instance to update
 const deleteDb = async (id) => {
-  console.log('Delete from teh DB', id);
+  console.log('Delete from the DB', id);
   const jateDb = await openDB('jate', 1);
   const tx = jateDb.transaction('jate', 'readwrite');
   const store = tx.objectStore('jate');
