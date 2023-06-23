@@ -6,7 +6,7 @@
 --- 
 The `Text Editor PWA` was created as part of Berkeley Coding Bootcamp Challenge 19 to fulfill the requirements of a Progressive Web App (PWA).
 - Deployed application can be accessed in the [Heroku](https://just-text-editor-pwa-0243e7542b0e.herokuapp.com/) cloud platform.
-- The walk-through video showcasing the operation of the Text Editor PWA application can be located in the [Walk-through Video](#walk-through-video) section. Alternatively, you can access the video through cloud storage by following this  [link]().
+- The walk-through video showcasing the operation of the Text Editor PWA application can be located in the [Walk-through Video](#walk-through-video) section. Alternatively, you can access the video through cloud storage by following this  [link](https://1drv.ms/v/s!Ak2qWe8ZT6ny3GlW0Omvwxb8blK4?e=vgqx7p).
 
 ---
 ## Table of Contents
@@ -28,8 +28,7 @@ The Text Editor, which can be installed as a Progressive Web Application, empowe
 
 ---
 ## Walk-through Video 
-
-
+https://github.com/UserOlena/text_editor_progressive_web_applications/assets/122197592/edfca061-bcf1-4ff5-85c6-e3f366fef451
 
 ---
 ## Technologies Used
@@ -57,7 +56,6 @@ The Text Editor, which can be installed as a Progressive Web Application, empowe
 
 ---
 ## Installation
-
 Deployed application can be accessed in the [Heroku](https://just-text-editor-pwa-0243e7542b0e.herokuapp.com/) cloud platform.
 
 ### To perform a local installation, please follow these steps:
@@ -123,7 +121,6 @@ Desktop Icon:
 
 ---
 ## User Story
-
 ```md
 AS A developer
 I WANT to create notes or code snippets with or without an internet connection
@@ -132,7 +129,6 @@ SO THAT I can reliably retrieve them for later use
 
 ---
 ## Acceptance Criteria
-
 ```md
 GIVEN a text editor web application
 WHEN I open my application in my editor
@@ -163,15 +159,12 @@ THEN I should have proper build scripts for a webpack application
 
 ---
 ## Contact
-
 -  [Olena P](https://github.com/UserOlena)
     
 ---
 ## Project Status 
-
 - Project is: Complete 
 
 ---
 ## License
-
 - This project is open source and available under the [MIT](./LICENSE)
