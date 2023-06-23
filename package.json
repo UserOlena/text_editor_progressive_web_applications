@@ -1,7 +1,7 @@
 {
   "name": "text_editor_progressive_web_applications",
   "version": "1.0.0",
-  "description": "",
+  "description": "The Text Editor, which can be installed as a Progressive Web Application, empowers users to save their thoughts while on the go, even in offline mode, by preloading the source code into the browser. Moreover, it integrates multiple data persistence techniques like local storage and indexDB to provide redundancy in case any of these options are unsupported by the browser.",
   "main": "server.js",
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
