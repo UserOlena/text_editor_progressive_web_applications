@@ -111,7 +111,7 @@ Desktop Icon:
 
 * Bundled with webpack
 
-* Create a service worker with workbox that Caches static assets
+* Uses service worker with workbox that Caches static assets
 
 * The application uses babel in order to use async / await
 
